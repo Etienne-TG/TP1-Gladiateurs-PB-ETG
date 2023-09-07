@@ -16,7 +16,20 @@ public class JeuGladiateurs {
     AffichageEcran affichage = new AffichageEcran();
     Personnage Bob = new Personnage("Bob le malchanceux",70,15,15,15);
     Personnage Igor = new Personnage("Igor l'empaleur",100,25,5,30);
+
+    Bob.setNom("Bob le malchanceux");
+    Bob.setValeurMaxAttaque(70);
+    Bob.setValeurDefense(15);
+    Bob.setPointsDeVie(15);
+    Bob.setInitiative(15);
     
+    Igor.setNom("Igor l'empaleur");
+    Igor.setValeurMaxAttaque(100);
+    Igor.setValeurDefense(25);
+    Igor.setPointsDeVie(5);
+    Igor.setInitiative(30);
+   
+    AffichageEcran screen = new AffichageEcran();
     //test
    
     // </editor-fold>
@@ -28,7 +41,11 @@ public class JeuGladiateurs {
     // TODO : Afficher les infos de chaque personnage
     // TODO : Afficher le message du début du combat
     // </editor-fold>
-
+   
+    Bob.afficherInfosPersonnage();
+    Igor.afficherInfosPersonnage();
+    screen.afficherDebutCombat();
+    
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
