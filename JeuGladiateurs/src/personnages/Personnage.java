@@ -20,7 +20,7 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
-    public Personnage(String nom,int pvs ,int attaqueMax, int defense, int ini) {
+    public Personnage(String nom, int pvs, int attaqueMax, int defense, int ini) {
         // TODO : Constructeur AVEC paramètres
     }
 
@@ -96,7 +96,7 @@ public class Personnage {
         System.out.println("Attaque : " + valeurMaxAttaque);
         System.out.println("Defense : " + valeurDefense);
         System.out.println("Points de vie : " + pointsDeVie);
-        System.out.println("Initiative : " + valeurMaxAttaque);
+        System.out.println("Initiative : " + initiative);
 
         if (pointsDeVie > 0) {
             System.out.println("Statut : Vivant");
@@ -120,12 +120,11 @@ public class Personnage {
     public void frapperPersonnage(Personnage personnageCible) {
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         int forceFrappe = attaqueCalcul();
-        
 
         //modifier les points de vie du personnage cible, afficher les détails
         // sur l'attaque, tel que montré dans l'énoncé.
         int dommages = forceFrappe - personnageCible.valeurDefense;
-        
+
         if (dommages < 0) {
             dommages = 0;
         }
@@ -138,8 +137,12 @@ public class Personnage {
         System.out.println(personnageCible.nom + " a une defense de : " + personnageCible.valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
     }
-
+//max - min + min
     public void setNewInitiativeRandom() {
+        Random rand = new Random();
+        int initiativeRandom;
+        initiativeRandom = rand.nextInt(100- 0) + 0;
+        initiative = initiativeRandom;
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
     }
     // </editor-fold>
