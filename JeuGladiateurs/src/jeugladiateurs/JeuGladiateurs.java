@@ -18,15 +18,15 @@ public class JeuGladiateurs {
         Personnage Igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
 
         Bob.setNom("Bob le malchanceux");
-        Bob.setValeurMaxAttaque(70);
+        Bob.setValeurMaxAttaque(15);
         Bob.setValeurDefense(15);
-        Bob.setPointsDeVie(15);
+        Bob.setPointsDeVie(70);
         Bob.setInitiative(15);
 
         Igor.setNom("Igor l'empaleur");
-        Igor.setValeurMaxAttaque(100);
-        Igor.setValeurDefense(25);
-        Igor.setPointsDeVie(5);
+        Igor.setValeurMaxAttaque(25);
+        Igor.setValeurDefense(5);
+        Igor.setPointsDeVie(100);
         Igor.setInitiative(30);
 
         //test
@@ -37,12 +37,12 @@ public class JeuGladiateurs {
         // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
         // TODO : Afficher les infos de chaque personnage
         // TODO : Afficher le message du début du combat
-        
-
         tour.afficheTour();
         Bob.afficherInfosPersonnage();
         Igor.afficherInfosPersonnage();
         affichage.afficherDebutCombat();
+      
+
         // </editor-fold>
         // **************************************************************************
         // **************************************************************************
