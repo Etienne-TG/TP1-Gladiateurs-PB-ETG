@@ -1,4 +1,5 @@
 package personnages;
+import java.util.Random;
 
 public class Personnage {
 
@@ -38,9 +39,8 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
-    public String getNom() {
+    
+        public String getNom() {
         return nom;
     }
 
@@ -60,6 +60,9 @@ public class Personnage {
         return initiative;
     }
 
+
+    // TODO : Les setters
+    
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -79,6 +82,7 @@ public class Personnage {
     public void setValeurMaxAttaque(int valeurMaxAttaque) {
         this.valeurMaxAttaque = valeurMaxAttaque;
     }
+    // </editor-fold>
 
     // **************************************************************************
     // **************************************************************************
@@ -107,9 +111,12 @@ public class Personnage {
     }
 
     private int attaqueCalcul() {
+         Random rand = new Random();
+         int valeurAttaque;
+         valeurAttaque = rand.nextInt(valeurMaxAttaque - 0) + 0;
         // TODO : Retourner la valeur de l'attaque du personnage.
         // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
-        return 0;
+        return valeurAttaque;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
