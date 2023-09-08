@@ -9,12 +9,13 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     // TODO : Mettre vos attributs ici
-    // </editor-fold>
-    String nom;
+       String nom;
     int pointsDeVie;
     int valeurMaxAttaque;
     int valeurDefense;
     int initiative;
+    // </editor-fold>
+ 
 
     // **************************************************************************
     // **************************************************************************
@@ -137,7 +138,7 @@ public class Personnage {
         System.out.println(personnageCible.nom + " a une defense de : " + personnageCible.valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
     }
-//max - min + min
+
     public void setNewInitiativeRandom() {
         Random rand = new Random();
         int initiativeRandom;
