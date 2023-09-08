@@ -9,13 +9,12 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     // TODO : Mettre vos attributs ici
-       String nom;
+    String nom;
     int pointsDeVie;
     int valeurMaxAttaque;
     int valeurDefense;
     int initiative;
     // </editor-fold>
- 
 
     // **************************************************************************
     // **************************************************************************
@@ -129,9 +128,10 @@ public class Personnage {
         if (dommages < 0) {
             dommages = 0;
         }
-        int pvs = personnageCible.pointsDeVie - forceFrappe;
-        if (pvs < 0) {
-            pvs = 0;
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+
+        if ( personnageCible.pointsDeVie < 0) {
+             personnageCible.pointsDeVie = 0;
         }
         System.out.println();
         System.out.println(nom + " attaque avec une puissance de : " + forceFrappe);
@@ -142,7 +142,7 @@ public class Personnage {
     public void setNewInitiativeRandom() {
         Random rand = new Random();
         int initiativeRandom;
-        initiativeRandom = rand.nextInt(100- 0) + 0;
+        initiativeRandom = rand.nextInt(100 - 0) + 0;
         initiative = initiativeRandom;
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
     }
