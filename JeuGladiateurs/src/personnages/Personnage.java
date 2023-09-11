@@ -97,6 +97,7 @@ public class Personnage {
         System.out.println("Defense : " + valeurDefense);
         System.out.println("Points de vie : " + pointsDeVie);
         System.out.println("Initiative : " + initiative);
+        //System.out.println("Classe : " + Personnage..mirmillon.classe);
 
         if (pointsDeVie > 0) {
             System.out.println("Statut : Vivant");
@@ -130,8 +131,8 @@ public class Personnage {
         }
         personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
 
-        if ( personnageCible.pointsDeVie < 0) {
-             personnageCible.pointsDeVie = 0;
+        if (personnageCible.pointsDeVie < 0) {
+            personnageCible.pointsDeVie = 0;
         }
         System.out.println();
         System.out.println(nom + " attaque avec une puissance de : " + forceFrappe);
@@ -147,4 +148,16 @@ public class Personnage {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
     }
     // </editor-fold>
+
+    public class mirmillon extends Personnage {
+
+        //String classe = "mirmillon";
+        //Random rand = new Random();
+       // int initiativeRandom = rand.nextInt(30 - 0) + 0;
+
+    }
+
+    public class retiaire extends Personnage {
+
+    }
 }
