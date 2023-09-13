@@ -151,9 +151,15 @@ public class Personnage {
 
     public class mirmillon extends Personnage {
 
-        //String classe = "mirmillon";
+        
+        private String classe = "mirmillon";
         //Random rand = new Random();
        // int initiativeRandom = rand.nextInt(30 - 0) + 0;
+
+        public mirmillon(String nom, int pvs, int attaqueMax, int defense, int ini) {
+            super(nom, pvs, attaqueMax, defense, ini);
+            
+        }
 
     }
 
