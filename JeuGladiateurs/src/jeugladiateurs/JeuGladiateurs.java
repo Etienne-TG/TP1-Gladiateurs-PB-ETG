@@ -3,6 +3,7 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.Personnage.mirmillon;
 
 public class JeuGladiateurs {
 
@@ -29,8 +30,25 @@ public class JeuGladiateurs {
         Igor.setPointsDeVie(100);
         Igor.setInitiative(30);
         
-        Personnage.mirmillon bob = new mirmillon();
-
+        
+        
+        
+         ///////////////////////////////////////////////////////
+       Personnage.mirmillon bobMirmillon = Bob.new mirmillon(); 
+       
+       bobMirmillon.setNom("Bob le malchanceux");
+       bobMirmillon.setPointsDeVie(70);
+       bobMirmillon.setValeurMaxAttaque(15);
+       bobMirmillon.setValeurDefense(15);
+       bobMirmillon.setInitiative(15);
+       bobMirmillon.afficherInfosPersonnage();
+      // bobMirmillon.setNewInitiativeRandom();
+       
+       //bobMirmillon.afficherInfosPersonnage();
+       //Bob.afficherInfosPersonnage();
+       ///////////////////////////////////////////////////////////////
+       
+       
         //test
         // </editor-fold>
         // **************************************************************************
@@ -54,17 +72,17 @@ public class JeuGladiateurs {
         do {
             tour.afficheTour();
             for (int i = 0; i < 100; i++) {
-                if (Bob.getInitiative() == i) {
-                    Igor.frapperPersonnage(Bob);
+                if (bobMirmillon.getInitiative() == i) {
+                    Igor.frapperPersonnage(bobMirmillon);
 
                 } else if (Igor.getInitiative() == i) {
-                    Bob.frapperPersonnage(Igor);
+                    bobMirmillon.frapperPersonnage(Igor);
                 }
             }
             affichage.afficherSeparateurInfosPerso();
-            Bob.afficherInfosPersonnage();
+            bobMirmillon.afficherInfosPersonnage();
             Igor.afficherInfosPersonnage();
-            Bob.setNewInitiativeRandom();
+            bobMirmillon.setNewInitiativeRandom();
             Igor.setNewInitiativeRandom();
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
