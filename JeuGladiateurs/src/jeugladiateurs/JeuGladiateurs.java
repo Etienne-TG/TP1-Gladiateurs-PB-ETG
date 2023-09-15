@@ -4,6 +4,7 @@ import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 import personnages.Mirmillon;
+import personnages.Retiaire;
 
 public class JeuGladiateurs {
 
@@ -18,7 +19,7 @@ public class JeuGladiateurs {
 //        Personnage Bob = new Personnage("Bob le malchanceux", 70, 15, 15, 15);
 //        Personnage Igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
         Mirmillon bob = new Mirmillon("Bob le malchanceux", 70, 15, 15, 15);
-        Personnage igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
+        Retiaire igor = new Retiaire("Igor l'empaleur", 100, 25, 5, 30);
 
         igor.setNom("Igor l'empaleur");
         igor.setValeurMaxAttaque(25);
