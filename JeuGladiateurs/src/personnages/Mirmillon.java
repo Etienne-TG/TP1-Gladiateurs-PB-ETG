@@ -81,7 +81,12 @@ public class Mirmillon extends Personnage {
             System.out.println(nom + " attaque une deuxieme fois avec une puissance de : " + forceFrappe);
             System.out.println(personnageCible.nom + " a une defense de : " + personnageCible.valeurDefense);
             System.out.println("Les dommages sont donc de : " + dommages);
+            if(personnageCible.pointsDeVie == 0){
+                            System.out.println(nom + " decapite son adversaire!");
+
+            }
         } else  {
+            System.out.println();
             System.out.println(nom + " decapite son adversaire!");
 
         }
