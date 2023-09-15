@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package personnages;
 
 import java.util.Random;
 
-/**
- *
- * @author 202110361
- */
+
 public class Mirmillon extends Personnage {
     public Mirmillon(String nom, int pvs, int attaqueMax, int defense, int ini) {
         super(nom, pvs, attaqueMax, defense, ini);

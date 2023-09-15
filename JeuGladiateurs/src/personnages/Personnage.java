@@ -23,7 +23,11 @@ public class Personnage {
     public Personnage(String nom, int pvs, int attaqueMax, int defense, int ini) {
         // TODO : Constructeur AVEC paramètres
         this.nom = nom;
-        //...
+        this.pointsDeVie = pvs;
+        this.valeurMaxAttaque = attaqueMax;
+        this.valeurDefense = defense;
+        this.initiative = ini;
+        
     }
 
     public Personnage() {

@@ -18,24 +18,15 @@ public class JeuGladiateurs {
 //        Personnage Bob = new Personnage("Bob le malchanceux", 70, 15, 15, 15);
 //        Personnage Igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
         Mirmillon bob = new Mirmillon("Bob le malchanceux", 70, 15, 15, 15);
-        Personnage Igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
+        Personnage igor = new Personnage("Igor l'empaleur", 100, 25, 5, 30);
 
-        bob.setNom("Bob le malchanceux");
-        bob.setValeurMaxAttaque(15);
-        bob.setValeurDefense(15);
-        bob.setPointsDeVie(70);
-        bob.setInitiative(15);
+        igor.setNom("Igor l'empaleur");
+        igor.setValeurMaxAttaque(25);
+        igor.setValeurDefense(5);
+        igor.setPointsDeVie(100);
+        igor.setInitiative(30);
 
-        Igor.setNom("Igor l'empaleur");
-        Igor.setValeurMaxAttaque(25);
-        Igor.setValeurDefense(5);
-        Igor.setPointsDeVie(100);
-        Igor.setInitiative(30);
-        
-        
-        
-        
-         ///////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////
 //       Personnage.mirmillon bobMirmillon = Bob.new mirmillon(); 
 //       
 //       bobMirmillon.setNom("Bob le malchanceux");
@@ -44,19 +35,18 @@ public class JeuGladiateurs {
 //       bobMirmillon.setValeurDefense(15);
 //       bobMirmillon.setInitiative(15);
 //       bobMirmillon.afficherInfosPersonnage();
-      // bobMirmillon.setNewInitiativeRandom();
-        bob.setNom("Bob le malchanceux");
-       bob.setPointsDeVie(70);
-       bob.setValeurMaxAttaque(15);
-       bob.setValeurDefense(15);
-       bob.setInitiative(15);
-       bob.afficherInfosPersonnage();
-      
-       //bobMirmillon.afficherInfosPersonnage();
-       //Bob.afficherInfosPersonnage();
-       ///////////////////////////////////////////////////////////////
-       
-       
+        // bobMirmillon.setNewInitiativeRandom();
+//        bob.setNom("Bob le malchanceux");
+//       bob.setPointsDeVie(70);
+//       bob.setValeurMaxAttaque(15);
+//       bob.setValeurDefense(15);
+//       bob.setInitiative(15);
+        bob.afficherInfosPersonnage();
+        igor.afficherInfosPersonnage();
+
+        //bobMirmillon.afficherInfosPersonnage();
+        //Bob.afficherInfosPersonnage();
+        ///////////////////////////////////////////////////////////////
         //test
         // </editor-fold>
         // **************************************************************************
@@ -81,22 +71,22 @@ public class JeuGladiateurs {
             tour.afficheTour();
             for (int i = 0; i < 100; i++) {
                 if (bob.getInitiative() == i) {
-                    Igor.frapperPersonnage(bob);
+                    igor.frapperPersonnage(bob);
 
-                } else if (Igor.getInitiative() == i) {
-                    bob.frapperPersonnage(Igor);
+                } else if (igor.getInitiative() == i) {
+                    bob.frapperPersonnage(igor);
                 }
             }
             affichage.afficherSeparateurInfosPerso();
             bob.afficherInfosPersonnage();
-            Igor.afficherInfosPersonnage();
+            igor.afficherInfosPersonnage();
             bob.setNewInitiativeRandom();
-            Igor.setNewInitiativeRandom();
+            igor.setNewInitiativeRandom();
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
 
-        } while (bob.getPointsDeVie() > 0 && Igor.getPointsDeVie() > 0);
-        affichage.afficheVictoire(bob, Igor);
+        } while (bob.getPointsDeVie() > 0 && igor.getPointsDeVie() > 0);
+        affichage.afficheVictoire(bob, igor);
 //        /////////////////////////////////////////////////
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
