@@ -46,6 +46,20 @@ public class Retiaire extends Personnage {
         if (filet == false) {
             System.out.println();
             System.out.println("Igor l'empaleur ramasse son filet et en profite pour attaquer");
+             int dommages = forceFrappe - personnageCible.valeurDefense;
+
+        if (dommages < 0) {
+            dommages = 0;
+        }
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+
+        if (personnageCible.pointsDeVie < 0) {
+            personnageCible.pointsDeVie = 0;
+        }
+        System.out.println();
+        System.out.println(nom + " attaque avec une puissance de : " + forceFrappe);
+        System.out.println(personnageCible.nom + " a une defense de : " + personnageCible.valeurDefense);
+        System.out.println("Les dommages sont donc de : " + dommages);
             filet = true;
         } else if (filet == true) {
             System.out.println();
