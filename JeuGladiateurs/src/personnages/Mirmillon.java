@@ -42,6 +42,7 @@ public class Mirmillon extends Personnage {
 
     @Override
     public void frapperPersonnage(Personnage personnageCible) {
+        
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         int forceFrappe = attaqueCalcul();
 

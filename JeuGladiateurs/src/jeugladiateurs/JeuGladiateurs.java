@@ -72,10 +72,14 @@ public class JeuGladiateurs {
             tour.afficheTour();
             for (int i = 0; i < 100; i++) {
                 if (bob.getInitiative() == i) {
-                    igor.frapperPersonnage(bob);
+                    if (igor.getPointsDeVie() > 0) {
+                        igor.frapperPersonnage(bob);
+                    }
 
                 } else if (igor.getInitiative() == i) {
+                    if (bob.getPointsDeVie() > 0){
                     bob.frapperPersonnage(igor);
+                    }
                 }
             }
             affichage.afficherSeparateurInfosPerso();
